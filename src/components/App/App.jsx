@@ -23,7 +23,7 @@ class App extends Component {
 
     if (prevState.searchQueru !== searchQueru || prevState.page !== page) {
       try {
-        this.setState({ isLoading: true, isButtonShow: true });
+        this.setState({ isLoading: true });
 
         const newSearchQuery = searchQueru.split('/')[1];
 
@@ -38,6 +38,7 @@ class App extends Component {
 
         this.setState(prevState => ({
           images: [...prevState.images, ...hits],
+          isButtonShow: true,
         }));
       } catch (error) {
         this.setState({ isButtonShow: false });
