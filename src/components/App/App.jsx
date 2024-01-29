@@ -7,6 +7,7 @@ import Button from '../Button/Button';
 import { AppStyled } from './App.styled';
 import { fetchImages } from 'api';
 import Loader from 'components/Loader/Loader';
+import { GlobalStyle } from 'components/GlobalStyle';
 
 class App extends Component {
   state = {
@@ -86,6 +87,7 @@ class App extends Component {
         {isLoading && <Loader />}
         {isButtonShow && <Button onClickButton={this.handleLoadMore} />}
         <ToastContainer autoClose={3000} />
+        <GlobalStyle />
       </AppStyled>
     );
   }
