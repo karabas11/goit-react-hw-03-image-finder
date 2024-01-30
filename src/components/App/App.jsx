@@ -64,6 +64,7 @@ class App extends Component {
     this.setState(prevState => {
       return {
         page: prevState.page + 1,
+        isButtonShow: false,
       };
     });
   };
